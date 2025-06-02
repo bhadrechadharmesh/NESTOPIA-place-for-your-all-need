@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    All listings
+    <ol>
+        <% for(let list of lists) { %>
+            <li>
+                <h2>Title :</h2><%= list.title %> <br>
+                <h2>Description:</h2> <%= list.description  %>
+                <h2>Image:</h2> <img src="<%=list.image.url %>" alt="" height="200px" width="200px">
+            </li>
+    
+            <% } %>
+    </ol>
+
+</body>
+</html>
