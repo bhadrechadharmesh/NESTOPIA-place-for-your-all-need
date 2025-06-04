@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestopia||New</title>
+</head>
+<body>
+    <form method="post" action="/listings">
+        <h2>Create new Listing</h2>
+        <input type="text" name="listing[title]" id="title" placeholder="title"> <br><br>
+        <textarea  name="listing[description]" placeholder="enter description" type="text"></textarea> <br><br>
+        <input type="text" name="listing[image][url]" id="url" placeholder="image url"> <br><br>
+        <input type="number" name="listing[price]" id="price" placeholder="price"> <br><br>
+        <input type="text" name="listing[location]" id="location" placeholder="location"> <br><br>
+        <input type="text" name="listing[country]" id="country" placeholder="country">
+        <button>submit</button>
+    </form>
+    
+</body>
+</html>
