@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestopia || edit</title>
+</head>
+<body>
+    <form action="/listings/<%= listing.id%>?_method=PATCH" method="post">
+        <h2>Edit your Listing</h2>
+        <h3>Title :</h3><input type="text" name="listing[title]" id="" value="<%=listing.title %>">
+        <h3>Description</h3> <textarea name="listing[description]" id="" rows="4" cols="50"><%= listing.description %></textarea>
+        <h3>Image Url:</h3> <input type="text" name="listing[image][url]" id="" value="<%= listing.image.url %>">
+        <h3>Price :</h3> <input type="number" name="listing[price]" id="" value="<%= listing.price %>">
+        <h3>Location :</h3> <input type="text" name="listing[location]" id="" value="<%= listing.location %>">
+        <h3>Country :</h3> <input type="text" value ="<%= listing.country %>" name="listing[country]" id="">
+
+        <button>submit</button>
+    </form>
+</body>
+</html>

@@ -9,11 +9,18 @@
     <h2>Listing details</h2>
 
     <ul>
-        <li><%= listing.title %></li>
-        <li><%= listing.description %></li>
-        <li>&#8377;<%= listing.price.toLocaleString("en-IN") %></li>
-        <li><%= listing.location %></li>
-        <li><%= listing.country %></li>
+        <li><h3>Title :</h3><%= listing.title %></li>
+        <li><h3>Description :</h3><%= listing.description %></li>
+        <li><h3>Price :</h3>&#8377;<%= listing.price.toLocaleString("en-IN") %></li>
+        <li><h3>Location  :</h3><%= listing.location %></li>
+        <li><h3>Country :</h3><%= listing.country %></li>
+
+        <form action="/listings/<%=listing.id %>/edit" method="get">
+            <button>Edit</button>
+        </form>
+        <form action="/listings/<%=listing.id %>?_method=Delete" method="post">
+            <button>Delete</button>
+        </form>
     </ul>
 </body>
 </html>
