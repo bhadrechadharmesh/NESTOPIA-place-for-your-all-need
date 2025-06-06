@@ -1,12 +1,12 @@
 <% layout('layouts/boilerplate') -%>
 <body>
-    All listings
-    <form method="get" action="/listing/new" >
+    <h1>All listings</h1>
+    <!-- <form method="get" action="/listing/new" >
         <button>Create New Listing</button>
-    </form>
+    </form> -->
     <ol>
         <% for(let list of lists) { %>
-            <li><h2>Title :</h2>
+            <li><b>Title :</b>
                 <a href="http://localhost:3000/listings/<%=list._id%>">
                     <%= list.title %> <br>
                     <img src="<%=list.image.url %>" alt="" height="200px" width="200px">
