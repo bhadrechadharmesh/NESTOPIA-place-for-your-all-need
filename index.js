@@ -23,7 +23,7 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(mongoUrl);
+  await mongoose.connect(mongoUrl); 
 }
 
 app.get("/", (req, res) => {
