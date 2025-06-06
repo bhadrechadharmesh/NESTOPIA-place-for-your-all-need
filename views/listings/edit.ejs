@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nestopia || edit</title>
-</head>
+<% layout('layouts/boilerplate') -%>
 <body>
     <form action="/listings/<%= listing.id%>?_method=PATCH" method="post">
         <h2>Edit your Listing</h2>
@@ -18,4 +12,3 @@
         <button>submit</button>
     </form>
 </body>
-</html>
