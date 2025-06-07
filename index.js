@@ -85,7 +85,7 @@ app.get("/listings/:id/edit", async(req, res) => {
 app.patch("/listings/:id", async(req, res) => {
   const{id}=req.params;
   await Listing.findByIdAndUpdate(id,{...req.body.listing});
-  res.redirect("/listings");
+  res.redirect(`/listings/${id}`);
 });
 
 //delete route

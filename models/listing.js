@@ -13,7 +13,7 @@ const listingSchema = new Schema({
         type:String,
       }, url:{
         type:String,
-        set:(v)=> v==="" ? "default link":v ,
+        set:(v)=> v==="" ? "https://images.unsplash.com/photo-1749225595496-06cd2c49fa2b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D":v ,
       }
     
   },
