@@ -9,8 +9,8 @@
 
         <img src="<%= listing.image.url%>" class="card-img-top show-img" alt="...">
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-  </div>
+    <p class="card-text">
+  
 
     <ul>
         <li><b>Title :</b><%= listing.title %></li>
@@ -19,17 +19,18 @@
         <li><b>Location  :</b><%= listing.location %></li>
         <li><b>Country :</b><%= listing.country %></li>
 
-        <div class="btns">
-            <form action="/listings/<%=listing.id %>/edit" method="get">
-                <button class="btn btn-dark m-3">Edit</button>
-            </form>
-            <form action="/listings/<%=listing.id %>?_method=Delete" method="post">
-                <button class="btn btn-dark m-3">Delete</button>
-            </form>
-        </div>
-
+        
     </ul>
-    </div>
+    </p></div>
+</div>
+<div class="btns">
+    <form action="/listings/<%=listing.id %>/edit" method="get">
+        <button class="btn btn-dark m-3">Edit</button>
+    </form>
+    <form action="/listings/<%=listing.id %>?_method=Delete" method="post">
+        <button class="btn btn-dark m-3">Delete</button>
+    </form>
+</div>
 
      </div>
     </div>

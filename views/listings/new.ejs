@@ -6,16 +6,22 @@
         <div class="col-8 offset-2">
             <br><br>
             <h2>Create new Listing</h2>
-            <form method="post" action="/listings">
+        <form method="post" action="/listings" class="needs-validation" novalidate>
 
         <div class="mb-3">
             <label for="title" class="form-label">Title:</label>
-            <input type="text" name="listing[title]" class="form-control" id="title" placeholder="title"> 
+            <input type="text" name="listing[title]"  class="form-control" id="title" placeholder="title" required> 
+            <div class="valid-feedback">
+                Nice
+            </div>
+                <div class="invalid-feedback">
+                    Title required
+                </div>
         </div>
 
         <div class="mb-3">
             <label for="description" class="form-label">Description:</label>
-            <textarea  name="listing[description]" placeholder="enter description" id="description" type="text" class="form-control"></textarea>
+            <textarea  name="listing[description]" required placeholder="enter description" id="description" type="text" class="form-control"></textarea>
         </div>
 
         <div class="mb-3">
@@ -26,17 +32,17 @@
         <div class="row">
         <div class="mb-3 col-md-4">
             <label for="price" class="form-label">Price:</label>
-            <input type="number" class="form-control" name="listing[price]" id="price" placeholder="price">
+            <input type="number" required class="form-control" name="listing[price]" id="price" placeholder="price">
         </div>
 
         <div class="mb-3 col-md-8">
             <label for="country" class="form-label">Country:</label>
-            <input type="text" name="listing[country]" id="country" class="form-control" placeholder="country">
+            <input type="text" required name="listing[country]" id="country" class="form-control" placeholder="country">
         </div>
         </div>
         <div class="mb-3">
             <label for="location" class="form-label">Location:</label>
-            <input type="text" name="listing[location]" id="location" class="form-control" placeholder="location"> 
+            <input type="text"required name="listing[location]" id="location" class="form-control" placeholder="location"> 
         </div>
 
 
@@ -47,5 +53,7 @@
 </div>
 
 
+ <script src="/js/script.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     
 </body>
