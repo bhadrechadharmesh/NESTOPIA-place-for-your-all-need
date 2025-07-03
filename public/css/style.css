@@ -62,7 +62,7 @@ body {
 
 
 /* index page styling */
-.card{
+.listing-card{
     border: none !important;
     margin-bottom: 2rem;
 }
@@ -100,4 +100,11 @@ body {
 
 .btns {
     display: flex;
+}
+
+
+
+.star {
+    color: orange;
+    font-size: 20px;
 }
