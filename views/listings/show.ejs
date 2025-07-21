@@ -70,10 +70,10 @@
                     <div class="card mb-3 col-5 ms-3">
                         <div class="card-body">
                             <h5 class="card-title">John Doe</h5>
+                            <p class="card-text mb-0"><%= r.rating %> <span class="star">&#9733;</span> </p>
                             <p class="card-text"> <%= r.comment %></p>
-                            <p class="card-text"><%= r.rating %> <span class="star">&#9733;</span> </p>
                         </div>
-                        <form class="mb-3" method="post" action="/listings/<%= listing.id%>/review/<%=r.id %>?_method=DELETE" >
+                        <form class="mb-3" method="post" action="/listings/<%= listing.id%>/reviews/<%=r.id %>?_method=DELETE" >
                             <button class="btn btn-sm btn-dark">Delete</button>
                         </form>
                     </div>
