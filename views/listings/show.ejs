@@ -16,6 +16,7 @@
 
 
                         <ul>
+                            <i>@<%= listing.owner.username %></i>
                             <li><b>Description :</b>
                                 <%= listing.description %>
                             </li>
@@ -33,6 +34,7 @@
                         </p>
                     </div>
                 </div>
+                <% if(currUser &&  currUser.id==listing.owner.id) {%>
                 <div class="btns">
                     <form action="/listings/<%=listing.id %>/edit" method="get">
                         <button class="btn btn-dark m-3">Edit</button>
@@ -41,11 +43,14 @@
                         <button class="btn btn-dark m-3">Delete</button>
                     </form>
                 </div>
+                <% } %>
 
             </div>
         </div>
 <hr>
-        <div class="col-8 offset-3">
+
+<div class="col-8 offset-3">
+            <% if(currUser){ %>
             <h4>Leave a Review</h4>
             <form action="/listings/<%=listing.id%>/reviews" method="post" class="needs-validation" novalidate> 
                 <div class="mb-3">
@@ -60,8 +65,8 @@
                 </div>
                 <button class="btn btn-danger">Submit</button>
             </form>
-
             <hr>
+            <% } %>
 
             <h4>All Reviews</h4>
 
@@ -69,7 +74,7 @@
                 <% for(r of listing.review) { %>
                     <div class="card mb-3 col-5 ms-3">
                         <div class="card-body">
-                            <h5 class="card-title">John Doe</h5>
+                            <h5 class="card-title">@<%=r.author.username %></h5>
                             <p class="card-text mb-0"><%= r.rating %> <span class="star">&#9733;</span> </p>
                             <p class="card-text"> <%= r.comment %></p>
                         </div>
